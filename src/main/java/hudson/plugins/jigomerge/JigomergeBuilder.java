@@ -28,6 +28,7 @@ public class JigomergeBuilder extends Builder {
 	public static final JigomergeBuildDescriptor DESCRIPTOR = new JigomergeBuildDescriptor();
 
 	private static final String JIGOMERGE_VERSION = "2.2.6";
+	private static final String JIGOMERGE_CLASSNAME = "SvnMergeTool";
 
 	private final String source;
 	private final String username;
@@ -90,7 +91,7 @@ public class JigomergeBuilder extends Builder {
 			InputStream scriptResource = this.getClass().getResourceAsStream(
 					"/scripts/jigomerge-" + JIGOMERGE_VERSION + ".groovy");
 			GroovyClassLoader gcl = new GroovyClassLoader();
-			Class<?> clazz = gcl.parseClass(scriptResource);
+			Class<?> clazz = gcl.parseClass(scriptResource, JIGOMERGE_CLASSNAME);
 			Constructor<?>[] constructors = clazz.getConstructors();
 			GroovyObject instance = (GroovyObject) constructors[0].newInstance(
 					dryRun, ignoreMergePatterns, oneByOne, eager, verbose,
