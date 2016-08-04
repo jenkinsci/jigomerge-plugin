@@ -8,7 +8,7 @@
 
 	<artifactId>jigomerge</artifactId>
 	<packaging>hpi</packaging>
-	<version>0.9</version>
+	<version>0.10-SNAPSHOT</version>
 	<name>Jigomerge plugin</name>
 	<url>http://wiki.jenkins-ci.org/display/JENKINS/Jigomerge+Plugin</url>
 
@@ -30,7 +30,7 @@
 		<connection>scm:git:ssh://git@github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/jenkinsci/${project.artifactId}-plugin.git</developerConnection>
 		<url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-	  <tag>jigomerge-0.9</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencies>
